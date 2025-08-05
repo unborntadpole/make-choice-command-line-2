@@ -1,0 +1,1 @@
+This one does not ask for a y/n input but instead asks for a number limit. If an option is guessed a 'limit' number of times in a row, then it declares the option as gods judgment and prints it as the final selection.
