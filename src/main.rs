@@ -67,10 +67,12 @@ fn main() {
         println!("{}{} occurance of choice {}", same_choice_counter, s, choice);
         counter += 1;
         if same_choice_counter == limit {
+            let num = num as f64;
+            let limit = limit as f64;
             println!(
-                "\n\nGod has chosen the same option {} times.\nThe probability of this happening was 1/{}\nYou are gonna have to go with {} as your choice.",
+                "\n\nGod has chosen the same option {} times.\nThe expectation of this hapenning was {} turns.\nYou are gonna have to go with {} as your choice.",
                 limit,
-                num.pow(limit as u32),
+                (num.powf(limit)-1.0)/(num -1.0),
                 choice,
             );
             println!("Phew! It took {} choices to come to this decision.", counter);
